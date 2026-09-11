@@ -1,0 +1,17 @@
+# Environment variable files containing sensitive keys
+.env
+.env.local
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Python cache & build files
+__pycache__/
+*.py[cod]
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
