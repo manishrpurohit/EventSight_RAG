@@ -1,0 +1,15 @@
+.git
+.gitignore
+.env
+.env.local
+.venv
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+scratch/
+.system_generated/

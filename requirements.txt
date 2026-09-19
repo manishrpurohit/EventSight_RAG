@@ -1,0 +1,24 @@
+# Production Dependencies for AI Analyst
+
+# Web Frameworks
+streamlit>=1.31.0
+gradio>=4.19.0
+plotly>=5.18.0
+
+# LLM & RAG Orchestration
+langchain>=0.1.0
+langchain-community>=0.0.20
+langchain-text-splitters>=0.0.1
+langchain-huggingface>=0.0.1
+langchain-groq>=0.0.1
+
+# Vector Search & Embeddings
+faiss-cpu>=1.7.4
+sentence-transformers>=2.3.0
+pypdf>=4.0.0
+
+# Data & Database
+pandas>=2.0.0
+openpyxl>=3.1.2
+sqlalchemy>=2.0.0
+python-dotenv>=1.0.0

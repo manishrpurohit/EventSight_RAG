@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  ai-analyst-streamlit:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai_analyst_streamlit
+    ports:
+      - "8501:8501"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - PORT=8501
+    restart: unless-stopped
+    command: ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+
+  ai-analyst-gradio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ai_analyst_gradio
+    ports:
+      - "7860:7860"
+    environment:
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - PORT=7860
+    restart: unless-stopped
+    command: ["python", "app.py"]

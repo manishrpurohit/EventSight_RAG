@@ -1,0 +1,25 @@
+services:
+  # Option 1: Streamlit Web Service on Render
+  - type: web
+    name: ai-analyst-streamlit
+    env: python
+    region: singapore
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: streamlit run streamlit_app.py --server.port=$PORT --server.address=0.0.0.0
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.10.12
+      - key: GROQ_API_KEY
+        sync: false
+
+  # Option 2: Docker Web Service on Render
+  - type: web
+    name: ai-analyst-docker
+    env: docker
+    region: singapore
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
