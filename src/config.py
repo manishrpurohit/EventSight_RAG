@@ -2,11 +2,12 @@ import os
 from pathlib import Path
 from dotenv import load_dotenv
 
-# Load environment variables from .env if present
-load_dotenv()
-
 # Base Directory of Project
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Load environment variables from .env or .environment if present
+load_dotenv(BASE_DIR / ".env")
+load_dotenv(BASE_DIR / ".environment")
 
 # Data Files
 EXCEL_FILE = BASE_DIR / "Event_Management_AI_Analyst_Data.xlsx"

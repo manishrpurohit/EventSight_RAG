@@ -1,5 +1,6 @@
 # Environment variable files containing sensitive keys
 .env
+.environment
 .env.local
 *.env
 
